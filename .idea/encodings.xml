@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/ch01-jdbc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch01-jdbc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch01-mybatis-Api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch01-mybatis-Api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch02-mybatis-mapper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch02-mybatis-mapper/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch03-mybatis-param/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch03-mybatis-param/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch04-mybatis-key/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch04-mybatis-key/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch05-mybatis-resultMap-simple/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch05-mybatis-resultMap-simple/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch06-mybatis-resultMap-relationship/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch06-mybatis-resultMap-relationship/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07-mybatis-dynamic-sql/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07-mybatis-dynamic-sql/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch08-mybatis-batch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch08-mybatis-batch/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09-mybatis-page/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09-mybatis-page/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-common/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

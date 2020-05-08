@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ch02-mybatis-mapper" />
+        <module name="ch05-mybatis-resultMap-simple" />
+        <module name="ch03-mybatis-param" />
+        <module name="ch01-jdbc" />
+        <module name="ch06-mybatis-resultMap-relationship" />
+        <module name="ch07-mybatis-dynamic-sql" />
+        <module name="ch09-mybatis-page" />
+        <module name="mybatis-common" />
+        <module name="ch08-mybatis-batch" />
+        <module name="ch04-mybatis-key" />
+        <module name="ch01-mybatis-Api" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

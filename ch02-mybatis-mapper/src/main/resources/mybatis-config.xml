@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!-- 别名定义 -->
+    <typeAliases>
+        <!-- 针对单个别名定义 type:类型的路径 alias:别名 -->
+        <typeAlias type="org.pojo.Dept" alias="dept"/>
+    </typeAliases>
+
+    <!--可以配置多个环境，一般项目配置一个开发、一个生产环境，
+    environments 的 default 属性表明使用哪个环境-->
+    <environments default="development">
+        <environment id="development">
+            <!--设定事务管理器，有两种类型，一个是JDBC，一个是Managed(容器事务)-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!-- 一般固定是POOLED,池化的.确定是使用连接池-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/demo"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- 加载映射文件-->
+    <mappers>
+        <!--通过resource方法一次加载一个映射文件 -->
+        <mapper resource="DeptMapper.xml"></mapper>
+    </mappers>
+</configuration>

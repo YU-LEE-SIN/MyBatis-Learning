@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dao.EmpDao">
+
+    <resultMap id="empMap" type="org.pojo.Employee">
+        <id column="pk_id" property="id"/>
+        <result column="user_name" property="name"/>
+        <result column="dept_Id" property="deptId"/>
+    </resultMap>
+    <!--  where元素,会自动帮我们添加where
+        如果有and 或者or开头,会自动帮我们删掉-->
+    <select id="getEmpByAge" resultMap="empMap">
+        select user_name ,age,address,dept_Id
+        from employee
+        <where>
+            <if test="age!=null">
+                age>#{age}
+            </if>
+        </where>
+    </select>
+
+    <!--
+    trim:只是用来裁剪字符用的,它有4个属性
+    1. prefix : 自动添加前缀
+    2.prefixOverrides :把前缀后面跟着内容覆盖掉
+    3.suffix :自动添加后缀
+    4.suffixOverrides : 把后缀之前的那个内容覆盖掉
+    -->
+    <select id="getEmpByAgeAndDeptId" resultMap="empMap">
+        select user_name ,age,address,dept_Id
+        from employee
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="axx!=null">
+               and age>#{axx}
+            </if>
+            <if test="deptId!=null">
+               and dept_Id>=#{deptId}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getEmpChoose" resultMap="empMap">
+        select user_name ,age,address,dept_Id
+        from employee
+        <choose>
+            <when test="age!=null">
+                where age>#{age}
+            </when>
+            <when test="deptId!=null">
+                where dept_Id>=#{deptId}
+            </when>
+            <otherwise>
+                1=1
+            </otherwise>
+        </choose>
+    </select>
+
+
+    <insert id="insertEmp">
+        insert into employee
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name!=null">
+                user_name,
+            </if>
+            <if test="age!=null">
+                age,
+            </if>
+                address,
+                dept_Id,
+        </trim>
+        <trim prefix="values(" suffix=")" suffixOverrides=",">
+            <if test="name!=null">
+                #{name},
+            </if>
+            <if test="age!=null">
+                #{age},
+            </if>
+                #{address},
+                #{deptId}
+        </trim>
+    </insert>
+  <!--  1.set只写一个
+    2.set会自动帮我们剔除掉最后的逗号
+    3.set不会帮我们处理null的情况
+    4.set不会帮我们在中间加逗号-->
+    <update id="updateEmp">
+        update employee
+        <set>
+            <if test="name!=null">
+                user_name=#{name},
+            </if>
+            <if test="age!=null">
+                age=#{age},
+            </if>
+            address= #{address},
+            dept_Id= #{deptId}
+            where pk_id=#{id}
+        </set>
+    </update>
+</mapper>

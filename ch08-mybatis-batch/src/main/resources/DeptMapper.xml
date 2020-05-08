@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dao.DeptDao">
+
+    <!--    进行批量操作的时候,有可能产生错误,原因是因为有些数据库
+           默认允许传递的数据量是有限制的,mysql默认是1M,
+           如果是这种情况,需要在mysql的配置文件(my.ini)中的
+           mysqld这个组里面添加max_allowed_packet=10M-->
+    <insert id="batchInsert" parameterType="org.pojo.Dept">
+        insert into dept(deptname) values
+        <foreach collection="list" item="dept" separator=",">
+            (#{dept.deptName})
+        </foreach>
+    </insert>
+
+    <delete id="batchDelete">
+        delete from dept where
+        <foreach collection="deptId" item="id" separator="or">
+            id=#{id}
+        </foreach>
+    </delete>
+
+    <!--利用分号分隔多个sql语句来实现,
+   需要在jdbc的连接url中添加allowMultiQueries=true这个选项即可-->
+    <!--sql语句相当于这个造型 ： update dept set deptname=xxx where id=xx；
+                   update dept set deptname=xxx where id=xx；
+                   update dept set deptname=xxx where id=xx；
+     但是这种操作,mysql与sqlserver是支持,oracle数据"好像"是不支持的
+     -->
+    <update id="batchUpdate">
+        <foreach collection="list" item="dept" separator=";">
+            update dept set
+            deptname=#{dept.deptName}
+            where id=#{dept.id}
+        </foreach>
+    </update>
+
+    <!--https://developpaper.com/mybatis-batch-updates-in-three-ways/
+    利用case when的方式批量更新(update)-->
+    <update id="batchUpdateOne">
+        update dept set
+        <trim prefix="deptname = case" suffix="end">
+            <foreach collection="list" item="dept">
+                when id=#{dept.id} then #{dept.deptName}
+            </foreach>
+        </trim>
+        <where>
+            <foreach collection="list" item="dept" separator="or">
+                id = #{dept.id}
+            </foreach>
+        </where>
+    </update>
+
+    <!--这就是一个普通的更新一条记录的写法,不是批量更新-->
+    <update id="update">
+        update dept set deptname = #{deptName}
+        where id = #{id}
+    </update>
+</mapper>

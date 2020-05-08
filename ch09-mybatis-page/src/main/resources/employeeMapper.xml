@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dao.EmployDao">
+
+    <resultMap id="emp" type="org.pojo.Employee">
+        <id  column="pk_id" property="id"/>
+        <result column="user_name" property="name"/>
+        <result column="age" property="age"/>
+        <result column="address" property="address"/>
+    </resultMap>
+
+    <select id="getEmpByCustom" resultMap="emp">
+        select  pk_id ,user_name,age,address
+        from employee order by  pk_id
+        limit #{offset} ,#{pageSize}
+    </select>
+
+    <select id="getEmpCount" resultType="int">
+         select count(*) from employee
+    </select>
+
+    <select id="getEmpByRowBounds"  resultMap="emp">
+
+        select pk_id ,user_name,age,address
+        from employee order by pk_id
+    </select>
+
+
+    <select id="getEmpByPageHelper" resultMap="emp">
+
+        select pk_id ,user_name,age,address
+         from employee order by pk_id
+    </select>
+</mapper>

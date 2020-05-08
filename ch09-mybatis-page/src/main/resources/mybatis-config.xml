@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <properties resource="db.properties">
+
+        <property name="defaultExecutorType" value="BATCH"/>
+    </properties>
+
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!--这个参数表明是否支持把下划线改成标准的驼峰属性形式-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+<!--设置插件支持方法参数-->
+
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <property name="supportMethodsArguments" value="true"/>
+        </plugin>
+    </plugins>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${database.driver}"/>
+                <property name="url" value="${database.url}"/>
+                <property name="username" value="${database.username}"/>
+                <property name="password" value="${database.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="employeeMapper.xml"></mapper>
+    </mappers>
+</configuration>

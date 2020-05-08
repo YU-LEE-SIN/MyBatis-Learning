@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <properties resource="db.properties"></properties>
+
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!--下面几个配置选项的值,都填的是默认值-->
+        <!--这个参数表明是否支持sql的别名,默认支持-->
+        <setting name="useColumnLabel" value="true"/>
+        <!--这个参数表明是否支持把下划线改成标准的驼峰属性形式-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--
+        自动映射行为,不管是resultType还是resultMap都是生效的
+
+        这个配置选项有3个值,NONE,PARTIAL,FULL,默认是PARTIAL
+
+        Partial表示只处理自己的映射配置,不包含子元素中(比如association与collection)
+        配置的映射信息
+        -->
+        <setting name="autoMappingBehavior" value="PARTIAL"/>
+    </settings>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${database.driver}"/>
+                <property name="url" value="${database.url}"/>
+                <property name="username" value="${database.username}"/>
+                <property name="password" value="${database.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="DeptMapper.xml"></mapper>
+    </mappers>
+</configuration>
