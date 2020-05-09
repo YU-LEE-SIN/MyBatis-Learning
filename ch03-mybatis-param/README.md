@@ -2,7 +2,10 @@
 mybatis的输入映射。
 ####简单类型
 三种简单类型输入
-
+    注意：#{}，${}
+    #{}标示一个占位符,
+    ${}:表示拼接sql串，将接收到参数的内容不加任何修饰拼接在sql中。
+	使用${}拼接sql，引起 sql注入
 mapper（Dao）类如下:
 ```java
 public interface EmployeeDao {

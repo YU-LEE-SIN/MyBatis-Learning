@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dao.EmpDao">
+
+    <resultMap id="emp" type="org.pojo.Employee">
+        <id  column="pk_id" property="id"/>
+        <result column="user_name" property="name"/>
+        <result column="age" property="age"/>
+        <result column="address" property="address"/>
+    </resultMap>
+
+    <select id="getAllEmp" resultType="org.pojo.Employee">
+        select  pk_id ,user_name,age,address
+        from employee
+    </select>
+
+</mapper>

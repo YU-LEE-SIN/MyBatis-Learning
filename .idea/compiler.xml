@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ch02-mybatis-mapper" />
+        <module name="ch11-mybatis-spring" />
         <module name="ch05-mybatis-resultMap-simple" />
         <module name="ch03-mybatis-param" />
         <module name="ch01-jdbc" />

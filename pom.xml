@@ -20,6 +20,7 @@
         <module>ch07-mybatis-dynamic-sql</module>
         <module>ch08-mybatis-batch</module>
         <module>ch09-mybatis-page</module>
+        <module>ch11-mybatis-spring</module>
     </modules>
 
     <properties>
