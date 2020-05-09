@@ -12,11 +12,12 @@
         <module name="ch03-mybatis-param" />
         <module name="ch01-jdbc" />
         <module name="ch06-mybatis-resultMap-relationship" />
-        <module name="ch07-mybatis-dynamic-sql" />
+        <module name="test-mybatis-generator" />
+        <module name="ch04-mybatis-key" />
         <module name="ch09-mybatis-page" />
         <module name="mybatis-common" />
         <module name="ch08-mybatis-batch" />
-        <module name="ch04-mybatis-key" />
+        <module name="ch07-mybatis-dynamic-sql" />
         <module name="ch01-mybatis-Api" />
       </profile>
     </annotationProcessing>

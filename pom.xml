@@ -21,6 +21,7 @@
         <module>ch08-mybatis-batch</module>
         <module>ch09-mybatis-page</module>
         <module>ch11-mybatis-spring</module>
+        <module>test-mybatis-generator</module>
     </modules>
 
     <properties>
