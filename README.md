@@ -1,5 +1,5 @@
-#MyBatis learning
--  原生jdbc操作   https://github.com/YU-LEE-SIN/MyBatis-Learning/ch01-jdbc
+## MyBatis learning
+- 原生jdbc操作   https://github.com/YU-LEE-SIN/MyBatis-Learning/ch01-jdbc
 - ch01 Mybatis原生API   https://github.com/YU-LEE-SIN/MyBatis-Learning/ch01-mybatis-Api
 - ch02 使用Mapper接口+mapper文件    https://github.com/YU-LEE-SIN/MyBatis-Learning/ch02-mybatis-mapper
 - ch03 mybatis输入映射    https://github.com/YU-LEE-SIN/MyBatis-Learning/ch03-mybatis-param
