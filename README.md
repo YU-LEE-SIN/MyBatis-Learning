@@ -1,1 +1,14 @@
 #MyBatis learning
+-  原生jdbc操作   https://github.com/YU-LEE-SIN/MyBatis-Learning/ch01-jdbc
+- ch01 Mybatis原生API   https://github.com/YU-LEE-SIN/MyBatis-Learning/ch01-mybatis-Api
+- ch02 使用Mapper接口+mapper文件    https://github.com/YU-LEE-SIN/MyBatis-Learning/ch02-mybatis-mapper
+- ch03 mybatis输入映射    https://github.com/YU-LEE-SIN/MyBatis-Learning/ch03-mybatis-param
+- ch04 获取自增长值    https://github.com/YU-LEE-SIN/MyBatis-Learning/ch04-mybatis-key 
+- ch05 简单输出映射    https://github.com/YU-LEE-SIN/MyBatis-Learning/ch05-mybatis-resultMap-simple
+- ch06 复杂映射    https://github.com/YU-LEE-SIN/MyBatis-Learning/ch06-mybatis-resultMap-relationship
+- ch07 动态sql     https://github.com/YU-LEE-SIN/MyBatis-Learning/ch07-mybatis-dynamic-sql
+- ch08 批量处理     https://github.com/YU-LEE-SIN/MyBatis-Learning/ch08-mybatis-batch
+- ch09 mybatis分页     https://github.com/YU-LEE-SIN/MyBatis-Learning/ch09-mybatis-page
+- ch11 mybatis+spring整合       https://github.com/YU-LEE-SIN/MyBatis-Learning/ch11-mybatis-spring
+- mybatis-common->获取Sqlsession  https://github.com/YU-LEE-SIN/MyBatis-Learning/mybatis-common
+- mybatis逆向工程 https://github.com/YU-LEE-SIN/MyBatis-Learning/test-mybatis-generator
