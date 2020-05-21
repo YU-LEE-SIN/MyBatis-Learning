@@ -1,5 +1,5 @@
 ## mybatis-generator 
-####使用Maven插件
+#### 使用Maven插件
 1. 在 pom.xml 中导入 generator 依赖
 2. 在resources下新建generatorConfig.xml
 3. 在Maven中 点击 Plugins\mybatis-generator\mybatis-generator:generate(双击运行)；
