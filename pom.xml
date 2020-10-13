@@ -32,7 +32,7 @@
         <mybatis.version>3.5.2</mybatis.version>
         <mysql.version>5.1.47</mysql.version>
         <pagehelper.version>5.1.10</pagehelper.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
     <dependencyManagement>
